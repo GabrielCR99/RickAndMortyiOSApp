@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RMTabBarController.swift
 //  RickAndMorty
 //
 //  Created by Gabriel Roveri on 02/07/23.
@@ -9,7 +9,7 @@ import UIKit
 
 /// Controller to house tabs and root tab controllers
 final class RMTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()
