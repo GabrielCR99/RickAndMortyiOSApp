@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>28</string>
+					<key>LocationEncoding</key>
+					<string>1</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>27</string>
+					<key>Timestamp</key>
+					<string>710088440.4166549</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>RickAndMorty/ViewModels/RMCharacterCollectionViewCellViewModel.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        guard let url = characterImageUrl else {
+</string>
+				<key>leading</key>
+				<string>    
+    public func fetchImage(completion: @escaping (Result&lt;Data, Error&gt;) -&gt; Void) {
+</string>
+				<key>trailing</key>
+				<string>            completion(.failure(URLError(.badURL)))
+            return
+        }
+</string>
+			</dict>
+			<key>title</key>
+			<string>Abstract to Image Manager</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>

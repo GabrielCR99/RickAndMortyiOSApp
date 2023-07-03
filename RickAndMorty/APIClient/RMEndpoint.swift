@@ -11,8 +11,8 @@ import Foundation
 @frozen enum RMEndpoint: String {
     /// Endpoint to get character info
     case character
-    /// Endpoint to get location ingo
+    /// Endpoint to get location info
     case location
-    /// Endpoint to get episode ingo
+    /// Endpoint to get episode info
     case episode
 }
