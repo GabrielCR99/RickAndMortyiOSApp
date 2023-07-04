@@ -55,7 +55,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Unsupported")
+        fatalError("Not implemented")
     }
     
     private func addConstraints() {
@@ -101,7 +101,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
                     self?.imageView.image = image
                 }
             case .failure(let error):
-                debugPrint(error)
+                dump(error)
                 break
             }
         }
