@@ -10,6 +10,8 @@ import UIKit
 /// Controller to house tabs and root tab controllers
 final class RMTabBarController: UITabBarController {
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()

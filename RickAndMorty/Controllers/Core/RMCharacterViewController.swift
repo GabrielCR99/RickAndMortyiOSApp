@@ -11,6 +11,8 @@ import UIKit
 final class RMCharacterViewController: UIViewController, RMCharacterListViewDelegate {
     private let characterListView = RMCharacterListView()
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
