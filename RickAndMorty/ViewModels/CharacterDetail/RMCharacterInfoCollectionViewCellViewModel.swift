@@ -38,7 +38,6 @@ final class RMCharacterInfoCollectionViewCellViewModel {
         }
         
         if let date = Self.dateFormatter.date(from: value), type == .created {
-            debugPrint(date)
             return Self.shortDateFormatter.string(from: date)
         }
         
@@ -78,7 +77,7 @@ final class RMCharacterInfoCollectionViewCellViewModel {
             case .created:
                 return .systemBrown
             case .location:
-                return .systemYellow
+                return .systemIndigo
             case .episodeCount:
                 return .systemPink
             }
