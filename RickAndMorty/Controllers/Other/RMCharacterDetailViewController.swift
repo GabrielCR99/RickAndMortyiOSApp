@@ -83,7 +83,6 @@ extension RMCharacterDetailViewController: UICollectionViewDelegate, UICollectio
                 withReuseIdentifier: RMCharacterPhotoCollectionViewCell.cellIdentifier,
                 for: indexPath) as? RMCharacterPhotoCollectionViewCell else { fatalError("") }
             cell.configure(with: viewModel)
-            cell.backgroundColor = .systemYellow
             
             return cell
         case .information(let viewModels):
@@ -91,7 +90,6 @@ extension RMCharacterDetailViewController: UICollectionViewDelegate, UICollectio
                 withReuseIdentifier: RMCharacterInfoCollectionViewCell.cellIdentifier,
                 for: indexPath) as? RMCharacterInfoCollectionViewCell else { fatalError("") }
             cell.configure(with: viewModels[indexPath.row])
-            cell.backgroundColor = .systemBlue
             
             return cell
         case .episodes(let viewModels):
@@ -99,7 +97,6 @@ extension RMCharacterDetailViewController: UICollectionViewDelegate, UICollectio
                 withReuseIdentifier: RMCharacterEpisodeCollectionViewCell.cellIdentifier,
                 for: indexPath) as? RMCharacterEpisodeCollectionViewCell else { fatalError("") }
             cell.configure(with: viewModels[indexPath.row])
-            cell.backgroundColor = .systemRed
             
             return cell
         }

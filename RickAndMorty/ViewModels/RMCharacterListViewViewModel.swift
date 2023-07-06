@@ -87,8 +87,8 @@ final class RMCharacterListViewViewModel: NSObject {
                     strongSelf.isLoadingMoreCharacters = false
                 }
             case .failure(let failure):
-                dump(failure)
                 self?.isLoadingMoreCharacters = false
+                dump(failure)
             }
         }
     }
