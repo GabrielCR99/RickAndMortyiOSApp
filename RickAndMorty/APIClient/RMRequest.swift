@@ -39,6 +39,7 @@ final class RMRequest {
             string += "?"
             let argumentString = queryParameters.compactMap({
                 guard let value = $0.value else { return nil }
+                
                 return "\($0.name)=\(value)"
             }).joined(separator: "&")
             
@@ -92,6 +93,7 @@ final class RMRequest {
                 }
                 if let rmEndpoint = RMEndpoint(rawValue: endpointString) {
                     self.init(endpoint: rmEndpoint, pathComponents: pathComponents)
+                    
                     return
                 }
             }
@@ -108,14 +110,17 @@ final class RMRequest {
                 }
                 if let rmEndpoint = RMEndpoint(rawValue: endpointString) {
                     self.init(endpoint: rmEndpoint, queryParameters: queryItems)
+                    
                     return
                 }
             }
         }
+        
         return nil
     }
 }
 
 extension RMRequest {
-    static let charactersRequestList = RMRequest(endpoint: .character)
+    static let listCharactersRequest = RMRequest(endpoint: .character)
+    static let listEpisodesRequest = RMRequest(endpoint: .episode)
 }

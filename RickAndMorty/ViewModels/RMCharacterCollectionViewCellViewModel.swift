@@ -27,9 +27,9 @@ final class RMCharacterCollectionViewCellViewModel: Hashable, Equatable {
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = characterImageUrl else {
             completion(.failure(URLError(.badURL)))
+            
             return
         }
-        let request = URLRequest(url: url)
         RMImageLoader.shared.downloadImage(url, completion: completion)
     }
     

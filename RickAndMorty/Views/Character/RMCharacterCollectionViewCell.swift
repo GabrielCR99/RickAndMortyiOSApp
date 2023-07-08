@@ -18,6 +18,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 4
         imageView.layer.maskedCorners = [.topLeft, .topRight]
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
     
@@ -26,6 +27,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
         label.textColor = .label
         label.font = .systemFont(ofSize: 18, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         return label
     }()
     
@@ -34,6 +36,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
         label.textColor = .secondaryLabel
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         return label
     }()
     

@@ -14,6 +14,7 @@ final class RMFooterLoadingCollectionReusableView: UICollectionReusableView {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
+        
         return spinner
     }()
     

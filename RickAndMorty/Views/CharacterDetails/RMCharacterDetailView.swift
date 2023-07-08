@@ -18,6 +18,7 @@ final class RMCharacterDetailView: UIView {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
+        
         return spinner
     }()
     
@@ -73,8 +74,8 @@ final class RMCharacterDetailView: UIView {
         collectionView.register(RMCharacterPhotoCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterPhotoCollectionViewCell.cellIdentifier)
         collectionView.register(RMCharacterInfoCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterInfoCollectionViewCell.cellIdentifier)
         collectionView.register(RMCharacterEpisodeCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterEpisodeCollectionViewCell.cellIdentifier)
-        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
         return collectionView
     }
 }

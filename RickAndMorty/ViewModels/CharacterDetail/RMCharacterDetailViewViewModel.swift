@@ -16,9 +16,7 @@ final class RMCharacterDetailViewViewModel {
     
     enum SectionType {
         case photo(viewModel: RMCharacterPhotoCollectionViewCellViewModel)
-        
         case information(viewModels: [RMCharacterInfoCollectionViewCellViewModel])
-        
         case episodes(viewModels: [RMCharacterEpisodeCollectionViewCellViewModel])
     }
     
@@ -61,7 +59,9 @@ final class RMCharacterDetailViewViewModel {
     // MARK: - Layouts
     
     public func createPhotoSectionLayout() -> NSCollectionLayoutSection {
-        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)))
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)))
         item.contentInsets = NSDirectionalEdgeInsets(
             top: 0,
             leading: 0,
@@ -77,7 +77,9 @@ final class RMCharacterDetailViewViewModel {
     }
     
     public func createInfoSectionLayout() -> NSCollectionLayoutSection {
-        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0)))
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.5),
+            heightDimension: .fractionalHeight(1.0)))
         item.contentInsets = NSDirectionalEdgeInsets(
             top: 2,
             leading: 2,
@@ -95,7 +97,9 @@ final class RMCharacterDetailViewViewModel {
     }
     
     public func createEpisodeSectionLayout() -> NSCollectionLayoutSection {
-        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)))
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)))
         item.contentInsets = NSDirectionalEdgeInsets(
             top: 10,
             leading: 5,

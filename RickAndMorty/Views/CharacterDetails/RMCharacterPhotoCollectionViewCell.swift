@@ -16,6 +16,7 @@ final class RMCharacterPhotoCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 4
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
 

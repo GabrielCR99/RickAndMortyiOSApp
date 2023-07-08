@@ -33,7 +33,6 @@ final class RMService {
         completion: @escaping (Result<T,Error>) -> Void
     ) {
         if let cachedData = cacheManager.cachedResponse(for: request.endpoint, url: request.url) {
-            debugPrint("Using cached api response")
             do {
                 let result = try JSONDecoder().decode(type.self, from: cachedData)
                 completion(.success(result))
@@ -46,12 +45,14 @@ final class RMService {
         
         guard let urlRequest = self.request(from: request) else {
             completion(.failure(RMServiceError.failedToCreateRequest))
+            
             return
         }
         
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, _, error in
             guard let data = data, error == nil else {
                 completion(.failure(error ?? RMServiceError.failedToGetData))
+                
                 return
             }
             
