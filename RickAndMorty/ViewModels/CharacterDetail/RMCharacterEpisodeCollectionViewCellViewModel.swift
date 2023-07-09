@@ -9,7 +9,7 @@ import UIKit
 
 protocol RMEpisodeDataRender {
     var episode: String { get }
-    var air_date: String { get }
+    var airDate: String { get }
     var name: String { get }
 }
 

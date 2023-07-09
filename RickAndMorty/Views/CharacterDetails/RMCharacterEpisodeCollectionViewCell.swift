@@ -85,7 +85,7 @@ final class RMCharacterEpisodeCollectionViewCell: UICollectionViewCell {
             // Main Queue
             self?.nameLabel.text = data.name
             self?.seasonLabel.text = "Episode: \(data.episode)"
-            self?.airDateLabel.text = "Aired on: \(data.air_date)"
+            self?.airDateLabel.text = "Aired on: \(data.airDate)"
         }
         viewModel.fetchEpisode()
         contentView.layer.borderColor = viewModel.borderColor.cgColor

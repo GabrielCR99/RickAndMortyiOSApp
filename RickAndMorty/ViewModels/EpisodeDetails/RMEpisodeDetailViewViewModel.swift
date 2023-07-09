@@ -61,7 +61,7 @@ final class RMEpisodeDetailViewViewModel {
         cellViewModels = [
             .information(viewModels: [
                 .init(title: "Episode Name", value: episode.name),
-                .init(title: "Air Data", value: episode.air_date),
+                .init(title: "Air Date", value: episode.airDate),
                 .init(title: "Episode", value: episode.episode),
                 .init(title: "Created", value: createdString),
             ]),
