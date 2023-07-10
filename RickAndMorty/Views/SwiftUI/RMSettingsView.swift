@@ -30,8 +30,12 @@ struct RMSettingsView: View {
                 }
                 Text(viewModel.title)
                     .padding(.leading, 10)
+                Spacer()
             }
             .padding(.bottom, 5)
+            .onTapGesture {
+                viewModel.onTapHandler(viewModel.type)
+            }
         }
     }
 }
@@ -41,14 +45,16 @@ struct RMSettingsView_Previews: PreviewProvider {
         return RMSettingsView(
             viewModel:
                     .init(
-                        cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0)})
+                        cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0) {
+                            debugPrint($0.displayTitle)
+                        }})
                     )
         )
     }
 }
 
-// This only works on iOS 17.0, also works on UIKit (Swift Macros)
+// This only works on iOS 17.0 and Xcode 15, also works on UIKit (Swift Macros)
 
 //#Preview {
-//    RMSettingsView()
+//    RMSettingsView(viewModel: .init(cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0)})))
 //}

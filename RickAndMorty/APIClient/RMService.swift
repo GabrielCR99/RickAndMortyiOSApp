@@ -56,7 +56,7 @@ final class RMService {
                 return
             }
             
-            // Decode the response
+            // Decode the response, and if success, save it in cache
             do {
                 let result = try JSONDecoder().decode(type.self, from: data)
                 self?.cacheManager.setCache(for: request.endpoint, url: request.url, data: data)
@@ -68,7 +68,7 @@ final class RMService {
         task.resume()
     }
     
-    //MARK: - Private
+    // MARK: - Private
     
     private func request(from rmRequest: RMRequest) -> URLRequest? {
         guard let url = rmRequest.url  else { return nil }

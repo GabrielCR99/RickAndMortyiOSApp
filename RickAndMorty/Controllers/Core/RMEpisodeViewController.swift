@@ -41,7 +41,7 @@ final class RMEpisodeViewController: UIViewController, RMEpisodeListViewDelegate
         ])
     }
     
-    //MARK: - RMEpisodeListViewDelegate
+    // MARK: - RMEpisodeListViewDelegate
     
     func rmEpisodeListView(_ episodeListView: RMEpisodeListView, didSelectEpisode episode: RMEpisode) {
         // Open detail controller for the given episode

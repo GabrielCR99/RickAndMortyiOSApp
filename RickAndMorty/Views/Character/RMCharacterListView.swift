@@ -39,7 +39,7 @@ final class RMCharacterListView: UIView {
         return collectionView
     }()
     
-    //MARK: - Init
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)

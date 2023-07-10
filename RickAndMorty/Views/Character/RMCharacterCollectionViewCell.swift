@@ -40,7 +40,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    //MARK: - Init
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)

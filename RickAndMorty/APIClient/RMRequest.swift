@@ -57,7 +57,7 @@ final class RMRequest {
     /// Desired HTTP Method
     public let httpMethod = "GET"
     
-    //MARK: - Public
+    // MARK: - Public
     
     /// Construct Request
     /// - Parameters:
