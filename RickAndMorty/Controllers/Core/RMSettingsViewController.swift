@@ -53,7 +53,6 @@ final class RMSettingsViewController: UIViewController {
         
         if let url = option.targetUrl {
             // Open website
-            
             let vc = SFSafariViewController(url: url)
             present(vc, animated: true)
             

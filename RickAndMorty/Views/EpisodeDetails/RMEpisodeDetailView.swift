@@ -53,7 +53,7 @@ final class RMEpisodeDetailView: UIView {
     }
     
     private func addConstraints() {
-        guard let collectionView = collectionView else { return }
+        guard let collectionView else { return }
         NSLayoutConstraint.activate([
             spinner.heightAnchor.constraint(equalToConstant: 100),
             spinner.widthAnchor.constraint(equalToConstant: 100),
@@ -135,7 +135,7 @@ extension RMEpisodeDetailView: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        guard let viewModel = viewModel else { return }
+        guard let viewModel else { return }
         let sections = viewModel.cellViewModels
         let sectionType = sections[indexPath.section]
         

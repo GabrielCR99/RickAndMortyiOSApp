@@ -56,7 +56,7 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("")
+        fatalError("Unsupported")
     }
     
     private func setupConstraints() {

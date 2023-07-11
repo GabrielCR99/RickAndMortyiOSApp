@@ -50,7 +50,7 @@ final class RMService {
         }
         
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, _, error in
-            guard let data = data, error == nil else {
+            guard let data, error == nil else {
                 completion(.failure(error ?? RMServiceError.failedToGetData))
                 
                 return

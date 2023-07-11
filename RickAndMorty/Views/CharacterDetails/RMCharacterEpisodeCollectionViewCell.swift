@@ -45,7 +45,7 @@ final class RMCharacterEpisodeCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("")
+        fatalError("Usupported")
     }
     
     private func setupLayer() {
@@ -70,7 +70,6 @@ final class RMCharacterEpisodeCollectionViewCell: UICollectionViewCell {
             airDateLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
             airDateLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.3),
         ])
-        
     }
     
     override func prepareForReuse() {

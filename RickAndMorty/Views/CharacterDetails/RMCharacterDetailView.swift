@@ -28,7 +28,6 @@ final class RMCharacterDetailView: UIView {
         self.viewModel = viewModel
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .systemPurple
         let collectionView = createCollectionView()
         self.collectionView = collectionView
         addSubviews(collectionView, spinner)
@@ -40,7 +39,7 @@ final class RMCharacterDetailView: UIView {
     }
     
     private func addConstraints() {
-        guard let collectionView = collectionView else { return }
+        guard let collectionView else { return }
         NSLayoutConstraint.activate([
             spinner.widthAnchor.constraint(equalToConstant: 100),
             spinner.heightAnchor.constraint(equalToConstant: 100),

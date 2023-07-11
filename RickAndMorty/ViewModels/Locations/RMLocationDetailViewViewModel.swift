@@ -48,7 +48,7 @@ final class RMLocationDetailViewViewModel {
     // MARK: - Private
     
     private func createCellViewModels() {
-        guard let dataTuple = dataTuple else { return }
+        guard let dataTuple else { return }
         let location = dataTuple.location
         let characters = dataTuple.characters
         
@@ -90,7 +90,7 @@ final class RMLocationDetailViewViewModel {
     private func fetchRelatedCharacters(location: RMLocation) {
         let requests = location.residents.compactMap({ return URL(string: $0) })
             .compactMap({ return RMRequest(url: $0)})
-        // Notified on all done
+        // Notified once all done
         let group = DispatchGroup()
         var characters: [RMCharacter] = []
         for request in requests {

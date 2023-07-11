@@ -82,7 +82,6 @@ final class RMLocationDetailView: UIView {
         collectionView.register(RMCharacterCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterCollectionViewCell.cellIdentifier)
         
         return collectionView
-        
     }
     
     // MARK: - Public
@@ -170,10 +169,9 @@ extension RMLocationDetailView {
             leading: 10,
             bottom: 10,
             trailing: 10)
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(
-            widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(80)),
-                                                     subitems: [item])
+        let group = NSCollectionLayoutGroup.vertical(
+            layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80)),
+            subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         
         return section
@@ -189,10 +187,11 @@ extension RMLocationDetailView {
             bottom: 5,
             trailing: 10
         )
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(260)),
-                                                       subitems: [item, item]
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(260)),
+            subitems: [item, item]
         )
         let section = NSCollectionLayoutSection(group: group)
         

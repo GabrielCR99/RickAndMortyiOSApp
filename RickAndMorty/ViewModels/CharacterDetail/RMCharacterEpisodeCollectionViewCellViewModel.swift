@@ -38,7 +38,6 @@ final class RMCharacterEpisodeCollectionViewCellViewModel: Hashable, Equatable {
     
     public func registerForData(_ block: @escaping (RMEpisodeDataRender) -> Void) {
         self.dataBlock = block
-        
     }
     
     public func fetchEpisode() {

@@ -9,8 +9,6 @@ import UIKit
 
 struct RMSettingsCellViewModel: Identifiable {
     
-    // MARK: - Private
-        
     // MARK: - Init
     
     init(type: RMSettingsOption, onTapHandler: @escaping (RMSettingsOption) -> Void) {

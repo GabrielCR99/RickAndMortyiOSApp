@@ -29,7 +29,7 @@ final class RMLocationViewController: UIViewController, RMLocationViewViewModelD
     }
     
     private func addSearchButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapShare))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearch))
     }
     
     private func addConstraints() {
@@ -42,8 +42,10 @@ final class RMLocationViewController: UIViewController, RMLocationViewViewModelD
     }
     
     @objc
-    private func didTapShare() {
-        
+    private func didTapSearch() {
+        let vc = RMSearchViewController(config: .init(type: .location))
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - RMLocationViewDelegate
