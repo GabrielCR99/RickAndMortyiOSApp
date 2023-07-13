@@ -45,7 +45,7 @@ final class RMSearchViewController: UIViewController {
     init(config: Config) {
         let viewModel = RMSearchViewViewModel(config: config)
         self.viewModel = viewModel
-        self.searchView = RMSearchView(frame: .zero, viewModel: .init(config: config))
+        self.searchView = RMSearchView(frame: .zero, viewModel: viewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -76,7 +76,7 @@ final class RMSearchViewController: UIViewController {
     
     @objc
     private func didTapExecuteSearch() {
-        //        viewModel.executeSearch()
+        viewModel.executeSearch()
     }
     
     private func addConstraints() {
@@ -93,8 +93,10 @@ final class RMSearchViewController: UIViewController {
 
 extension RMSearchViewController: RMSearchViewDelegate {
     func rmSearchView(_ searchView: RMSearchView, didSelectOption option: RMSearchInputViewViewModel.DynamicOption) {
-        let vc = RMSearchOptionPickerViewController(option: option) {
-            debugPrint("Did select \($0)")
+        let vc = RMSearchOptionPickerViewController(option: option) { [weak self] selection in
+            DispatchQueue.main.async {
+                self?.viewModel.set(value: selection, for: option)
+            }
         }
         if #available(iOS 15.0, *) {
             vc.sheetPresentationController?.detents = [.medium()]

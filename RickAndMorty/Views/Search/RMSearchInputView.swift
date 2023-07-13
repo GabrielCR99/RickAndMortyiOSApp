@@ -32,6 +32,8 @@ final class RMSearchInputView: UIView {
         }
     }
     
+    private var stackView: UIStackView?
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -58,12 +60,15 @@ final class RMSearchInputView: UIView {
     
     private func createOptionStackView() -> UIStackView {
         let stackView = UIStackView()
+        self.stackView = stackView
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 6
         stackView.distribution = .fillEqually
         stackView.alignment = .center
         addSubview(stackView)
+        
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
             stackView.leftAnchor.constraint(equalTo: leftAnchor),
@@ -108,9 +113,7 @@ final class RMSearchInputView: UIView {
         guard let options = viewModel?.options else { return }
         let tag = sender.tag
         let selected = options[tag]
-        delegate?.rmSearchInputView(self, didSelectOption: selected)
-        
-        debugPrint("Did tap \(selected.rawValue)")
+        delegate?.rmSearchInputView(self, didSelectOption: selected)        
     }
     
     // MARK: - Public
@@ -122,5 +125,23 @@ final class RMSearchInputView: UIView {
     
     public func presentKeyboard() {
         searchBar.becomeFirstResponder()
+    }
+    
+    public func update(
+        option: RMSearchInputViewViewModel.DynamicOption, value: String) {
+        // Update options
+        guard let buttons = stackView?.arrangedSubviews as? [UIButton],
+              let allOptions = viewModel?.options,
+              let index = allOptions.firstIndex(of: option) else { return }
+        
+        buttons[index].setAttributedTitle(
+            NSAttributedString(
+                string: value.uppercased(),
+                attributes: [ .font: UIFont.systemFont(ofSize: 18, weight: .medium),
+                              .foregroundColor: UIColor.link
+                ]
+            ),
+            for: .normal
+        )
     }
 }
