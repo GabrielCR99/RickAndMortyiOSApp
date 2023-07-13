@@ -36,7 +36,7 @@ final class RMSearchViewController: UIViewController {
         
         let type: `Type`
     }
-        
+    
     private let viewModel: RMSearchViewViewModel
     private let searchView: RMSearchView
     
@@ -54,22 +54,29 @@ final class RMSearchViewController: UIViewController {
     }
     
     // MARK: - View Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.config.type.title
         view.backgroundColor = .systemBackground
         view.addSubview(searchView)
         addConstraints()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapExecuteSearch))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Search",
+            style: .done,
+            target: self,
+            action: #selector(didTapExecuteSearch))
+        searchView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchView.presentKeyboard()
     }
     
     @objc
     private func didTapExecuteSearch() {
-//        viewModel.executeSearch()
+        //        viewModel.executeSearch()
     }
     
     private func addConstraints() {
@@ -79,5 +86,24 @@ final class RMSearchViewController: UIViewController {
             searchView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             searchView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+}
+
+// MARK: - RMSearchViewDelegate
+
+extension RMSearchViewController: RMSearchViewDelegate {
+    func rmSearchView(_ searchView: RMSearchView, didSelectOption option: RMSearchInputViewViewModel.DynamicOption) {
+        let vc = RMSearchOptionPickerViewController(option: option) {
+            debugPrint("Did select \($0)")
+        }
+        if #available(iOS 15.0, *) {
+            vc.sheetPresentationController?.detents = [.medium()]
+            vc.sheetPresentationController?.prefersGrabberVisible = true
+        } else {
+            // Fallback on earlier versions
+            modalPresentationStyle = .custom
+            modalTransitionStyle = .crossDissolve
+        }
+        present(vc, animated: true)
     }
 }
