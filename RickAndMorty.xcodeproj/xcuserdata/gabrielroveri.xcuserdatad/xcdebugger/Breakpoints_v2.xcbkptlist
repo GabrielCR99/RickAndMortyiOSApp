@@ -14,10 +14,153 @@
             filePath = "RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "makeSearchAPICall(_:request:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DEB94667-9D2F-421A-81BF-B29DFD8F6C9C - e65468c59bf0d697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.makeSearchAPICall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(_: &#x3c4;_0_0.Type, request: RickAndMorty.RMRequest) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "DEB94667-9D2F-421A-81BF-B29DFD8F6C9C - dd083303cffc1032"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; () in RickAndMorty.RMSearchViewViewModel.makeSearchAPICall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(_: &#x3c4;_0_0.Type, request: RickAndMorty.RMRequest) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AFDDF38-7471-4008-B2F7-070C2421A7E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "processSearchResults(model:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4AFDDF38-7471-4008-B2F7-070C2421A7E9 - 5b9866d961d24a9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.processSearchResults(model: Swift.Decodable &amp; Swift.Encodable) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1764">
+               </Location>
+               <Location
+                  uuid = "4AFDDF38-7471-4008-B2F7-070C2421A7E9 - 5b9866d961d24a9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.processSearchResults(model: Swift.Decodable &amp; Swift.Encodable) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1888">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9993B1B-A504-47D5-8700-BB2EDD62ECCB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "processSearchResults(model:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9993B1B-A504-47D5-8700-BB2EDD62ECCB - 5b9866d961d248ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.processSearchResults(model: Swift.Decodable &amp; Swift.Encodable) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "D9993B1B-A504-47D5-8700-BB2EDD62ECCB - 5b9866d961d24803"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.processSearchResults(model: Swift.Decodable &amp; Swift.Encodable) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "D9993B1B-A504-47D5-8700-BB2EDD62ECCB - 5b9866d961d24803"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.RMSearchViewViewModel.processSearchResults(model: Swift.Decodable &amp; Swift.Encodable) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielroveri/Documents/SwiftProjects/RickAndMorty/RickAndMorty/ViewModels/Search/RMSearchViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

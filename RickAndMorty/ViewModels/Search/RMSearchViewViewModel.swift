@@ -23,6 +23,9 @@ final class RMSearchViewViewModel {
     
     private var searchResultHandler: ((RMSearchResultViewModel) -> Void)?
     
+    private var noResultsHandler: (() -> Void)?
+
+    
     // MARK: - Init
     
     init(config: RMSearchViewController.Config) {
@@ -35,10 +38,11 @@ final class RMSearchViewViewModel {
         self.searchResultHandler = block
     }
     
+    public func registerNoResultHandler(_ block: @escaping () -> Void) {
+        self.noResultsHandler = block
+    }
+    
     public func executeSearch() {
-        // Test search text
-        debugPrint(searchText)
-        
         // Build arguments
         var queryParams = [
             URLQueryItem(name: "name", value: searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))]
@@ -61,9 +65,6 @@ final class RMSearchViewViewModel {
         case .episode:
             makeSearchAPICall(RMGetAllEpisodesResponse.self, request: request)
         }
-        
-        // Send API call
-        
     }
     
     private func makeSearchAPICall<T: Codable>(_ type: T.Type, request: RMRequest) {
@@ -71,8 +72,8 @@ final class RMSearchViewViewModel {
             switch result {
             case .success(let model):
                 self?.processSearchResults(model: model)
-            case .failure(let error):
-                dump(error)
+            case .failure:
+                self?.handleNoResults()
                 break
             }
         }
@@ -80,6 +81,7 @@ final class RMSearchViewViewModel {
     
     private func processSearchResults(model: Codable) {
         var resultsVM: RMSearchResultViewModel?
+        
         if let characterResults = model as? RMGetAllCharactersResponse {
             resultsVM = .characters(characterResults.results.compactMap({
                 return .init(characterName: $0.name,
@@ -102,7 +104,12 @@ final class RMSearchViewViewModel {
             self.searchResultHandler?(results)
         } else {
             // Fallback error
+            handleNoResults()
         }
+    }
+    
+    private func handleNoResults() {
+        noResultsHandler?()
     }
     
     public func set(query text: String) {
