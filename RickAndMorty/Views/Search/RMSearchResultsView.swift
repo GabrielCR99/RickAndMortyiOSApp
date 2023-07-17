@@ -197,6 +197,7 @@ extension RMSearchResultsView: UICollectionViewDelegate, UICollectionViewDataSou
         
         // Episode size
         let width = bounds.width - 20
+        
         return CGSize(width: width, height: 100)
     }
 }
