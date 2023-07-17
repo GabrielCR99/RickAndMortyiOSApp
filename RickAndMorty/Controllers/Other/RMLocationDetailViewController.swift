@@ -29,7 +29,7 @@ final class RMLocationDetailViewController: UIViewController, RMLocationDetailVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Episode"
+        title = "Location"
         view.backgroundColor = .systemBackground
         view.addSubview(detailView)
         viewModel.delegate = self

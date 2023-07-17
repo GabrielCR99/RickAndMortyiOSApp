@@ -156,7 +156,6 @@ final class RMSearchInputView: UIView {
 extension RMSearchInputView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Notify delegate of text change
-        debugPrint(searchText)
         delegate?.rmSearchInputView(self, didChangeSearchText: searchText)
     }
     

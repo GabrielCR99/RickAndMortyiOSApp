@@ -44,11 +44,9 @@ struct RMSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         return RMSettingsView(
             viewModel:
-                    .init(
-                        cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0) {
-                            debugPrint($0.displayTitle)
-                        }})
-                    )
+                    .init(cellViewModels:
+                            RMSettingsOption.allCases.compactMap({ return .init(type: $0) { dump($0) }})
+                         )
         )
     }
 }
@@ -56,5 +54,10 @@ struct RMSettingsView_Previews: PreviewProvider {
 // This only works on iOS 17.0 and Xcode 15, also works on UIKit (Swift Macros)
 
 //#Preview {
-//    RMSettingsView(viewModel: .init(cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0)})))
+//    RMSettingsView(viewModel: .init(cellViewModels:
+//                                        RMSettingsOption.allCases.compactMap({
+//        return .init(type: $0) {
+//            dump($0)
+//        }
+//    })))
 //}
