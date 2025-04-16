@@ -26,7 +26,7 @@ final class RMLocationDetailViewViewModel {
         case characters(viewModels: [RMCharacterCollectionViewCellViewModel])
     }
     
-    public weak var delegate: RMLocationDetailViewViewModelDelegate?
+    public weak var delegate: (any RMLocationDetailViewViewModelDelegate)?
     
     public private(set) var cellViewModels: [SectionType] = []
 

@@ -13,7 +13,7 @@ protocol RMLocationViewViewModelDelegate: AnyObject {
 
 final class RMLocationViewViewModel {
     
-    weak var delegate: RMLocationViewViewModelDelegate?
+    weak var delegate: (any RMLocationViewViewModelDelegate)?
     
     private var locations: [RMLocation] = [] {
         didSet {

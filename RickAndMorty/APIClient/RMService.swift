@@ -30,7 +30,7 @@ final class RMService {
     public func execute<T: Codable>(
         _ request: RMRequest,
         expecting type: T.Type,
-        completion: @escaping (Result<T,Error>) -> Void
+        completion: @escaping (Result<T,any Error>) -> Void
     ) {
         if let cachedData = cacheManager.cachedResponse(for: request.endpoint, url: request.url) {
             do {

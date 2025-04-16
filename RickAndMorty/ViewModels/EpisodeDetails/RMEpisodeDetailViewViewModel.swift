@@ -26,7 +26,7 @@ final class RMEpisodeDetailViewViewModel {
         case characters(viewModels: [RMCharacterCollectionViewCellViewModel])
     }
     
-    public weak var delegate: RMEpisodeDetailViewViewModelDelegate?
+    public weak var delegate: (any RMEpisodeDetailViewViewModelDelegate)?
     
     public private(set) var cellViewModels: [SectionType] = []
 

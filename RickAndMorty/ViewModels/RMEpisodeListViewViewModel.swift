@@ -15,7 +15,7 @@ protocol RMEpisodeListViewViewModelDelegate: AnyObject {
 
 /// View Model to handle episode list view logic
 final class RMEpisodeListViewViewModel: NSObject {
-    public weak var delegate: RMEpisodeListViewViewModelDelegate?
+    public weak var delegate: (any RMEpisodeListViewViewModelDelegate)?
     
     private var isLoadingMoreEpisodes = false
     

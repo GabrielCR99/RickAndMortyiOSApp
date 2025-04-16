@@ -14,7 +14,7 @@ protocol RMLocationViewDelegate: AnyObject {
 
 final class RMLocationView: UIView {
     
-    public weak var delegate: RMLocationViewDelegate?
+    public weak var delegate: (any RMLocationViewDelegate)?
     
     private var viewModel: RMLocationViewViewModel? {
         didSet {

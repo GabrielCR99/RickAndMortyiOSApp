@@ -28,8 +28,10 @@ struct RMSettingsView: View {
                         .background(Color(viewModel.iconContainerColor))
                         .cornerRadius(6)
                 }
+                
                 Text(viewModel.title)
                     .padding(.leading, 10)
+                
                 Spacer()
             }
             .padding(.bottom, 5)
@@ -40,24 +42,7 @@ struct RMSettingsView: View {
     }
 }
 
-struct RMSettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        return RMSettingsView(
-            viewModel:
-                    .init(cellViewModels:
-                            RMSettingsOption.allCases.compactMap({ return .init(type: $0) { dump($0) }})
-                         )
-        )
-    }
+#Preview {
+    RMSettingsView(viewModel: .init(cellViewModels: RMSettingsOption.allCases.compactMap({ return .init(type: $0) { dump($0) }
+    })))
 }
-
-// This only works on iOS 17.0 and Xcode 15, also works on UIKit (Swift Macros)
-
-//#Preview {
-//    RMSettingsView(viewModel: .init(cellViewModels:
-//                                        RMSettingsOption.allCases.compactMap({
-//        return .init(type: $0) {
-//            dump($0)
-//        }
-//    })))
-//}

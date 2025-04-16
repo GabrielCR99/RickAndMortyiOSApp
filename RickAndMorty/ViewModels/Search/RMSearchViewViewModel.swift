@@ -25,7 +25,7 @@ final class RMSearchViewViewModel {
     
     private var noResultsHandler: (() -> Void)?
     
-    private var searchResultModel: Codable?
+    private var searchResultModel: (any Codable)?
     
     // MARK: - Init
     
@@ -53,6 +53,7 @@ final class RMSearchViewViewModel {
         queryParams.append(contentsOf: optionMap.enumerated().compactMap({ _, element in
             let key = element.key
             let value = element.value
+            
             return URLQueryItem(name: key.queryArguments, value: value)
         }))
         
@@ -81,7 +82,7 @@ final class RMSearchViewViewModel {
         }
     }
     
-    private func processSearchResults(model: Codable) {
+    private func processSearchResults(model: any Codable) {
         var resultsVM: RMSearchResultType?
         var nextUrl: String?
         

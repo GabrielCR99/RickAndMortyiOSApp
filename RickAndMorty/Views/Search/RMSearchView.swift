@@ -20,7 +20,7 @@ protocol RMSearchViewDelegate: AnyObject {
 
 final class RMSearchView: UIView {
     
-    weak var delegate: RMSearchViewDelegate?
+    weak var delegate: (any RMSearchViewDelegate)?
     
     private let viewModel: RMSearchViewViewModel
     
@@ -56,9 +56,9 @@ final class RMSearchView: UIView {
     }
     
     private func setupHandlers() {
-        viewModel.registerOptionChangeBlock { tuple in
+        viewModel.registerOptionChangeBlock {
             // tuple: option | newValue
-            self.searchInputView.update(option: tuple.0, value: tuple.1)
+            self.searchInputView.update(option: $0.0, value: $0.1)
         }
         
         viewModel.registerSearchResultHandler { [weak self] result in

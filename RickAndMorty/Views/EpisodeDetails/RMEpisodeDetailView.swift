@@ -13,7 +13,7 @@ protocol RMEpisodeDetailViewDelegate: AnyObject {
 
 final class RMEpisodeDetailView: UIView {
     
-    public weak var delegate: RMEpisodeDetailViewDelegate?
+    public weak var delegate: (any RMEpisodeDetailViewDelegate)?
     
     private var viewModel: RMEpisodeDetailViewViewModel? {
         didSet {

@@ -13,7 +13,7 @@ protocol RMEpisodeListViewDelegate: AnyObject {
 
 /// View that handles showing list of episodes, loaders, and so on
 final class RMEpisodeListView: UIView {
-    public weak var delegate: RMEpisodeListViewDelegate?
+    public weak var delegate: (any RMEpisodeListViewDelegate)?
     
     private let viewModel = RMEpisodeListViewViewModel()
     

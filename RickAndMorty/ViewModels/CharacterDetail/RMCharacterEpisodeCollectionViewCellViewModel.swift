@@ -16,7 +16,7 @@ protocol RMEpisodeDataRender {
 final class RMCharacterEpisodeCollectionViewCellViewModel: Hashable, Equatable {
     private let episodeDataUrl: URL?
     private var isFetching = false
-    private var dataBlock: ((RMEpisodeDataRender) -> Void)?
+    private var dataBlock: ((any RMEpisodeDataRender) -> Void)?
     
     public let borderColor: UIColor
     
@@ -36,14 +36,14 @@ final class RMCharacterEpisodeCollectionViewCellViewModel: Hashable, Equatable {
     
     // MARK: - Public
     
-    public func registerForData(_ block: @escaping (RMEpisodeDataRender) -> Void) {
+    public func registerForData(_ block: @escaping (any RMEpisodeDataRender) -> Void) {
         self.dataBlock = block
     }
     
     public func fetchEpisode() {
         guard !isFetching else {
-            if let model = episode {
-                dataBlock?(model)
+            if let episode {
+                dataBlock?(episode)
             }
             
             return

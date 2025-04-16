@@ -17,7 +17,7 @@ protocol RMSearchInputViewDelegate: AnyObject {
 /// View for top part of search screen with search bar
 final class RMSearchInputView: UIView {
     
-    weak var delegate: RMSearchInputViewDelegate?
+    weak var delegate: (any RMSearchInputViewDelegate)?
     
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()

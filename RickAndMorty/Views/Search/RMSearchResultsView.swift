@@ -16,7 +16,7 @@ protocol RMSearchResultsViewDelegate: AnyObject {
 /// Shows search results UI (table or collection as needed)
 final class RMSearchResultsView: UIView {
     
-    weak var delegate: RMSearchResultsViewDelegate?
+    weak var delegate: (any RMSearchResultsViewDelegate)?
     
     private var viewModel: RMSearchResultViewModel? {
         didSet {
